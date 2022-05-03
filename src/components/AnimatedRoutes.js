@@ -7,11 +7,12 @@ import Blue from "../pages/Blue";
 
 function AnimatedRoutes() {
   return (
-    <AnimatePresence>
+    <AnimatePresence exitBeforeEnter>
       <Routes>
         <Route path="/green" element={<Green />} />
         <Route path="/yellow" element={<Yellow />} />
         <Route path="/blue" element={<Blue />} />
+        <Route path="/*" element={<Yellow />} />
       </Routes>
     </AnimatePresence>
   );
