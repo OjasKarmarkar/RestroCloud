@@ -9,9 +9,9 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence exitBeforeEnter>
       <Routes>
-        <Route path="/green" element={<Green />} />
-        <Route path="/yellow" element={<Yellow />} />
-        <Route path="/blue" element={<Blue />} />
+        <Route path="/orders" element={<Green />} />
+        <Route path="/home" element={<Yellow />} />
+        <Route path="/billing" element={<Blue />} />
         <Route path="/*" element={<Yellow />} />
       </Routes>
     </AnimatePresence>
