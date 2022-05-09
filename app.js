@@ -2,7 +2,7 @@ import dotenv from 'dotenv'
 import express from 'express'
 import db from './db/db.js'
 import morgan from 'morgan'
-// import userRouter from './routes/user.js'
+import myRouter from './routes/routes.js'
 // import activityRouter from './routes/activity.js'
 import cors from 'cors'
 
@@ -17,7 +17,7 @@ app.use(morgan(':method :url :status :response-time ms'))
 app.use(cors())
 app.use(express.json())
 
-// app.use('/api/user', userRouter)
+app.use('/api', myRouter)
 // app.use('/api/activity', activityRouter)
 
 const server = app.listen(port, () =>
