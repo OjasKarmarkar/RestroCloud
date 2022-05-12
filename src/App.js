@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import Header from './components/Header/Header'
-import HeaderBg from './components/Header/HeaderBg'
+import ScrollTop from './components/ScrollTop'
 import AnimatedRoutes from './components/AnimatedRoutes'
 import './pages/Page.css'
 
@@ -9,8 +9,8 @@ function App() {
   return (
     <Router>
       <Header />
-      <HeaderBg />
       <AnimatedRoutes />
+      <ScrollTop />
     </Router>
   )
 }

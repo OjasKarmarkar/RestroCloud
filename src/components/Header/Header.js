@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { MdFastfood } from 'react-icons/md'
-import { BsCart2, BsPerson } from 'react-icons/bs'
+import { BsCart2 } from 'react-icons/bs'
 
 function Header() {
   return (
-    <div className='fixed top-0 bg-black text-white flex w-screen justify-around items-center py-2 h-10 z-50'>
+    <div className='fixed top-0 bg-black text-white dark:bg-slate-900 flex w-screen justify-around items-center py-2 h-10 z-50'>
       <div className='flex'>
         <MdFastfood size={30} /> <p>RestroCloud</p>
       </div>
@@ -15,7 +15,10 @@ function Header() {
         <Link to="/billing" style={{textDecoration: "none", fontSize:"1.25em"}}>Billing</Link>
       </div>
       <div className='flex '>
-      <BsCart2 size={25}/><BsPerson size={25}/>
+        <button>
+          <BsCart2 size={25}/>
+        </button>
+      {/* <BsPerson size={25}/> */}
       </div>
     </div>
   )

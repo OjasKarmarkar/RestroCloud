@@ -2,12 +2,13 @@ import React from 'react'
 import MenuDD from './MenuDD'
 import'./Menu.css'
 
-function Menu() {
+function Menu({items}) {
+  //console.log(Object.entries(items))
   return (
     <div className='menu'>
-    <MenuDD ddId={1}/>
-    <MenuDD ddId={2}/>
-    <MenuDD ddId={3}/>
+      {Object.entries(items).map((item,index)=>{
+        return <MenuDD ddId={item[0]} ddItems={item[1]} key={index}/>
+      })}
     </div>
   )
 }
