@@ -1,12 +1,20 @@
 import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { addOrder } from '../../features/orderSlice'
 
 function MenuItem({itemInfo}) {
+
+  const orders = useSelector(state => state.order.value)
+  const dispatch = useDispatch()
+
   return (
     <div className='h-48 w-[95%] bg-white dark:bg-slate-800 dark:text-white mt-4 rounded-md flex p-3 relative'>
       
       <div className='h-full aspect-square bg-white dark:bg-slate-900 rounded-lg flex items-center justify-center'>
-        <button className='absolute z-10 bg-black py-1 px-3 rounded-md bottom-1 text-white'>
-          Add +
+        <button 
+          onClick={() => {dispatch(addOrder([itemInfo.name, itemInfo])); console.log(orders)}}
+          className='absolute z-10 bg-black py-1 px-3 rounded-md bottom-1 text-white'>
+          {itemInfo.name in orders? "Added" : "Add +"}
         </button> 
         <img src=	{itemInfo.img} 
              alt="dish"
