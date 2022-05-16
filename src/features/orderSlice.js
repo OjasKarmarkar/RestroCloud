@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-export const orderSlice = createSlice({
+const orderSlice = createSlice({
   name: 'order',
   initialState: {
     value: {}
@@ -9,17 +9,17 @@ export const orderSlice = createSlice({
     addOrder: (state, action) => {
         if (!(action.payload in state))
         {
-            state.value[action.payload[0]] = {info: action.payload[1], count: 1}
+            state.value[action.payload[0]] = {info: action.payload[1], count: 1, cost: 69}
         }
     },
     incrementOrder: (state, action) => {
         state.value[action.payload].count += 1
     },
     decrementOrder: (state, action) => {
-        if (state[action.payload].count === 1) {
-            delete state.value[action.payload].count
+        if (state.value[action.payload].count > 1) {
+          state.value[action.payload].count -= 1
         } else {
-            state.value[action.payload].count -= 1
+          delete state.value[action.payload]
         }
     }
   }

@@ -11,6 +11,7 @@ function Green() {
       exit = {e}
       transition = {t}
       className='page green'>
+        {/* <HeaderBg /> */}
         <OrderContainer />
     </motion.div>
   )

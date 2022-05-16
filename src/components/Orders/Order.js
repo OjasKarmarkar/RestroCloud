@@ -1,9 +1,12 @@
 import React from "react";
 import { BiDownArrow, BiUpArrow } from "react-icons/bi";
+import { useDispatch } from "react-redux";
+import { incrementOrder, decrementOrder } from "../../features/orderSlice";
 
 function Order({ info, count }) {
 
-  console.log(info, count)
+  //const orders = useSelector( state => state.order.value )
+  const dispatch = useDispatch()
 
   return (
     <div className="h-48 w-full bg-white dark:bg-slate-800 my-1 rounded-md flex items-center p-3 relative">
@@ -25,7 +28,10 @@ function Order({ info, count }) {
 
       {/* no. of orders button */}
       <div className="h-full aspect-9-16 flex flex-col justify-center bg-sky-400 rounded-lg">
-        <button className="w-full flex justify-center h-full rounded-t-md">
+        <button 
+          onClick={() => dispatch(incrementOrder(info.name))}
+          className="w-full flex justify-center h-full rounded-t-md"
+          >
           <BiUpArrow size={30} />
         </button>
 
@@ -33,7 +39,10 @@ function Order({ info, count }) {
           <p>{count}</p>
         </div>
 
-        <button className="w-full flex justify-center h-full rounded-b-md">
+        <button 
+          onClick={() => dispatch(decrementOrder(info.name))}
+          className="w-full flex justify-center h-full rounded-b-md"
+        >
           <BiDownArrow size={30} />
         </button>
       </div>
