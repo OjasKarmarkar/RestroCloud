@@ -50,4 +50,4 @@ const menuSchema = new mongoose.Schema({
         "type": "Boolean"
     }
 });
-export default mongoose.model('RestroDB', menuSchema, 'Menu',);
+export default mongoose.model('Menu', menuSchema, 'Menu',);

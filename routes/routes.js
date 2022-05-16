@@ -3,6 +3,8 @@ import express from 'express'
 
 import {
   currentMenu,
+  tableInfo,
+  updateOrder
 } from '../controller/restro.js'
 
 const router = new express.Router()
@@ -14,10 +16,10 @@ const router = new express.Router()
 router.get('/menu', currentMenu)
 
 //Get table-order info
-// router.post('/order-info', tableInfo)
+router.get('/table/:id', tableInfo)
 
-// //Update order/table
-// router.put('/update-order', updateOrder)
+//Update order/table
+router.put('/update-order/:id/:ord', updateOrder)
 
 // //Get bill / Split bill
 // router.post('/billing', billing)

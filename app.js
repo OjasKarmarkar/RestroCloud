@@ -19,7 +19,7 @@ app.use(express.json())
 
 app.use('/api', myRouter)
 // app.use('/api/activity', activityRouter)
-
+ 
 const server = app.listen(port, () =>
   console.log(`server has started on port ${port}`)
 )
