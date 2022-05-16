@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { i, a, e, t } from '../styles/PageTransitionStyles'
+import BillingContainer from '../components/Billing/BillingContainer'
 
 function Blue() {
   return (
@@ -10,7 +11,7 @@ function Blue() {
       exit = {e}
       transition = {t}
       className='page blue'>
-        Blue
+        <BillingContainer />
     </motion.div>
   )
 }
