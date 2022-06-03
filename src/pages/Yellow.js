@@ -25,7 +25,7 @@ const categorize = (menu) => {
 
 function Yellow() {
 
-  const [menuObj, setMenuObj] = useState({})
+  //const [menuObj, setMenuObj] = useState({})
   const [loading, setLoading] = useState(true)
   const dispatch = useDispatch()
   const cachedMenu = useSelector( state => state.menu.value ) 
@@ -36,14 +36,14 @@ function Yellow() {
       axios.get(`https://whispering-taiga-13938.herokuapp.com/api/menu`)
           .then(res => {
             let menuWCat = categorize(res.data)
-            setMenuObj(menuWCat)
+            //setMenuObj(menuWCat)
             dispatch(updateMenu(menuWCat))
             setLoading(false)
           })
         } else {
-          setMenuObj(cachedMenu)
+          //setMenuObj(cachedMenu)
           setLoading(false)
-    }
+        }
      // eslint-disable-next-line
   },[])
 
@@ -64,10 +64,10 @@ function Yellow() {
         <Carousel />
         </div>
         <div className='menu-category-container'>
-        <MenuCategory categories={Object.keys(menuObj)} />
+        <MenuCategory categories={Object.keys(cachedMenu)} />
         </div>
         <div className='menu-container'>
-          <Menu items={menuObj} />
+          <Menu items={cachedMenu} />
         </div>
     </motion.div>
   )
