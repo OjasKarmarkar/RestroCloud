@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux'
 
 function Bill() {
 
-    const orders = useSelector( state => state.order.value )
     const bill = useSelector( state => state.bill.value )
     
     let totalCost = 0

@@ -37,10 +37,6 @@ function OrderButton() {
     }
   }
 
-  const calculateBill = () => {
-    
-  }
-
   return (
     <div className='fixed bottom-0 left-0 h-12 w-full flex justify-center items-center'>
       <button
