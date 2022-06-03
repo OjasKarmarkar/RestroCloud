@@ -32,9 +32,11 @@ function Header() {
         <Link to="/orders" style={{textDecoration: "none", fontSize:"1.25em"}}>Orders</Link>
         <Link to="/billing" style={{textDecoration: "none", fontSize:"1.25em"}}>Billing</Link>
       </div>
-      <div className='flex '>
+      <div className='flex w-1/5 justify-center'>
         <button>
-          <BsCart2 size={25}/>
+          <a href="https://github.com/OjasKarmarkar/RestroCloud" target="_blank" rel="noreferrer noopener">
+            <AiFillGithub size={30}/>
+          </a>
         </button>
       {/* <BsPerson size={25}/> */}
       </div>

@@ -5,11 +5,11 @@ import { useSelector } from 'react-redux'
 
 function Bill() {
 
-    const orders = useSelector( state => state.order.value )
+    const bill = useSelector( state => state.bill.value )
     
     let totalCost = 0
 
-    Object.entries(orders).forEach(( item ) => {
+    Object.entries(bill).forEach(( item ) => {
         totalCost += item[1].cost * item[1].count
     })
 
@@ -32,7 +32,7 @@ function Bill() {
             {today}
         </div>
         
-        {Object.entries(orders).map((item, index) => {
+        {Object.entries(bill).map((item, index) => {
             return <BillItem name={item[0]} count={item[1].count} cost={item[1].cost} key={index} />
         })}
 
