@@ -23,7 +23,7 @@ function Bill() {
     today = mm + '/' + dd + '/' + yyyy;
 
   return (
-    <div className='flex flex-col items-center h-min bg-white text-black dark:bg-slate-800 dark:text-white space-y-8 pb-5 px-2 rounded-2xl'>
+    <div className='mt-10 flex flex-col items-center h-min bg-white text-black dark:bg-slate-800 dark:text-white space-y-8 pb-5 px-2 rounded-2xl'>
         <div className='flex justify-between items-center w-full px-4 my-4'>
             <div className='flex items-end text-4xl'>
                 <MdFastfood size={40}/>
