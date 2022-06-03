@@ -8,9 +8,11 @@ function MenuDD({ddId, ddItems}) {
     <div className='w-screen bg-sky-400 h-10 text-white flex justify-center items-center px-5'>
       {ddId}
     </div>
-    {ddItems.map((item,index)=>{
-      return <MenuItem itemId={1} itemInfo={item} key={index}/>
-    })}
+    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4'>
+      {ddItems.map((item,index)=>{
+        return <MenuItem itemId={1} itemInfo={item} key={index}/>
+      })}
+    </div>
     </div>
   )
 }
