@@ -12,6 +12,9 @@ const orderSlice = createSlice({
             state.value[action.payload[0]] = {info: action.payload[1], count: 1, cost: 69}
         }
     },
+    removeOrder: (state) => {
+      state.value = {}
+    },
     incrementOrder: (state, action) => {
         state.value[action.payload].count += 1
     },
@@ -25,6 +28,6 @@ const orderSlice = createSlice({
   }
 })
 
-export const { addOrder, incrementOrder, decrementOrder} = orderSlice.actions
+export const { addOrder, removeOrder, incrementOrder, decrementOrder} = orderSlice.actions
 
 export default orderSlice.reducer
