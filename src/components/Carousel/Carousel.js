@@ -57,6 +57,7 @@ export const Carousel = () => {
         <motion.img
           key={page}
           src={images[imageIndex]}
+          className="car-img"
           custom={direction}
           variants={variants}
           initial="enter"
