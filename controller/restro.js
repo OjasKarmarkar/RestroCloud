@@ -60,8 +60,29 @@ const updateOrder = async (req, res) => {
    
 }
 
+const resetTable = async (req, res) => {
+    if(req.params.id){
+        try {
+            Tables.findOneAndUpdate({"_id": mongoose.Types.ObjectId(req.params.id)} , {"vacant" : true , "orders":[] },
+            null, function (err, table) {
+                if (table) {
+                    res.status(201).json({ "success": true, "data": [] , "message":"Resetted Successfully!" })
+                } else {    
+                    res.status(400).json({ "success": false, "data": [], "message": err })
+                }
+    
+            });
+        } catch (error) {
+            res.status(500).json({ "success": false, "data": [], "message": error.toString() })
+        }
+    }else{
+        res.status(500).json({ "success": false, "data": [], "message": "Send Table Id to reset !!" })
+    }
+}
+
 export {
     currentMenu,
     tableInfo,
-    updateOrder
+    updateOrder,
+    resetTable
 }

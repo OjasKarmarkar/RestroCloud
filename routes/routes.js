@@ -4,7 +4,8 @@ import express from 'express'
 import {
   currentMenu,
   tableInfo,
-  updateOrder
+  updateOrder,
+  resetTable
 } from '../controller/restro.js'
 
 const router = new express.Router()
@@ -20,6 +21,9 @@ router.get('/table/:id', tableInfo)
 
 //Update order/table
 router.put('/update-order/:id/:ord', updateOrder)
+
+//Reset Table
+router.put('/reset/:id' , resetTable)
 
 // //Get bill / Split bill
 // router.post('/billing', billing)
