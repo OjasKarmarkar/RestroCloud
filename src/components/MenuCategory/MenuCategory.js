@@ -4,7 +4,7 @@ import './MenuCategory.css'
 
 function MenuCategory({'categories': cats}) {
   return (
-    <div className='menu-category'>
+    <div class="py-10 px-10 flex flex-col md:flex-row gap-20">
       {
         cats.map((item,index)=>{
             return <MenuCategoryItem itemId={item} key={index}/>

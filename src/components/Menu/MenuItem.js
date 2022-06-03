@@ -18,14 +18,17 @@ function MenuItem({itemInfo}) {
         />
       </div>
 
-      <div className='w-full px-6 flex justify-between text-3xl'>
+      <div className='w-full max-h-8 text-clip px-6 flex justify-between text-2xl overflow-hidden'>
         <p>{itemInfo.name}</p>
         <p>₹69</p>
       </div>
 
-      <div className='w-full h-1/6 px-6 flex justify-start text-sm overflow-y-auto'>
-        <p className='line-clamp-300 leading-[1.25]'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit soluta id accusamus temporibus nam omnis maiores itaque similique aliquid non vel in, iste explicabo voluptate blanditiis voluptatum ea laborum totam harum facilis perspiciatis maxime. Suscipit, hic mollitia! Illo obcaecati commodi magnam. Corrupti fugiat itaque ipsa. Suscipit veniam voluptatum provident similique. Commodi, saepe libero aliquam ipsam id doloremque inventore veniam rem veritatis ad voluptate! Iusto repudiandae dolorum veritatis id veniam molestiae voluptate unde eum consectetur quod natus eaque consequatur, non quaerat eligendi quas architecto! Quas molestias cum dolorum quae illo nesciunt aliquid quibusdam reiciendis sunt consequatur deleniti, corrupti labore in error!</p>
-
+      <div className='w-full max-h-4 px-6 flex justify-start text-xs text-gray-400 overflow-hidden' >
+        <p className='line-clamp-300 leading-[1.25]'>Ingredients : {itemInfo.ingredients}</p>
+      
+      </div>
+      <div>
+   
       </div>
 
       {itemInfo.name in orders?

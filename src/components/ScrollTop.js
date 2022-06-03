@@ -1,5 +1,5 @@
 import React from 'react'
-import { BsFillArrowUpCircleFill } from 'react-icons/bs'
+import { BsChevronUp} from 'react-icons/bs'
 
 function ScrollTop() {
   const handleClick = () => {
@@ -12,8 +12,8 @@ function ScrollTop() {
   return (
     <button 
         onClick={handleClick}
-        className= 'bg-black text-white dark:bg-white dark:text-black border-2 border-slate-500  rounded-full flex justify-center items-center fixed bottom-10 right-10 font-bold text-lg h-10 w-10'>
-        <BsFillArrowUpCircleFill className='h-full w-full' />
+        className= 'bg-black text-white dark:bg-white dark:text-black border-2 border-slate-500  rounded-full flex justify-center items-center fixed bottom-10 right-10 font-bold text-lg h-14 w-14'>
+        <BsChevronUp className='h-50% w-50%' />
     </button>
   )
 }
