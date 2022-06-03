@@ -9,7 +9,8 @@
 .menu-category {
     width: 80vw;
     display: grid;
-    grid-template-columns: repeat(3,26.67vw);
+    justify-content: center;
+    grid-template-columns: repeat(2,26.67vw);
 }
 .menu-category-item {
     height: 10em;
