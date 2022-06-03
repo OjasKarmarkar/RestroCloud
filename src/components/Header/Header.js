@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { MdFastfood } from 'react-icons/md'
-import { BsCart2 } from 'react-icons/bs'
+import { AiFillGithub } from "react-icons/ai";
 import { useState , useEffect } from 'react'
 
 function Header() {
@@ -32,7 +32,7 @@ function Header() {
         <Link to="/orders" style={{textDecoration: "none", fontSize:"1.25em"}}>Orders</Link>
         <Link to="/billing" style={{textDecoration: "none", fontSize:"1.25em"}}>Billing</Link>
       </div>
-      <div className='flex w-1/5 justify-center'>
+      <div className='flex justify-center'>
         <button>
           <a href="https://github.com/OjasKarmarkar/RestroCloud" target="_blank" rel="noreferrer noopener">
             <AiFillGithub size={30}/>

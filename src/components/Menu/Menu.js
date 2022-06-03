@@ -3,7 +3,7 @@ import MenuDD from './MenuDD'
 import'./Menu.css'
 
 function Menu({items}) {
-  //console.log(Object.entries(items))
+  console.log(Object.entries(items))
   return (
     <div className='menu'>
       {Object.entries(items).map((item,index)=>{

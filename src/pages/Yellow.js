@@ -24,7 +24,7 @@ const categorize = (menu) => {
 
 function Yellow() {
 
-  //const [menuObj, setMenuObj] = useState({})
+  const [menuObj, setMenuObj] = useState({})
   const [loading, setLoading] = useState(true)
   const dispatch = useDispatch()
   const cachedMenu = useSelector( state => state.menu.value ) 
@@ -35,14 +35,14 @@ function Yellow() {
       axios.get(`https://whispering-taiga-13938.herokuapp.com/api/menu`)
           .then(res => {
             let menuWCat = categorize(res.data)
-            //setMenuObj(menuWCat)
+            setMenuObj(menuWCat)
             dispatch(updateMenu(menuWCat))
             setLoading(false)
           })
         } else {
-          //setMenuObj(cachedMenu)
+          setMenuObj(cachedMenu)
           setLoading(false)
-        }
+    }
      // eslint-disable-next-line
   },[])
 
@@ -60,19 +60,19 @@ function Yellow() {
           </div>
         }
                 <section id="home">
-            <div class="px-24 py-8 flex flex-col md:flex-row justify-between h-screen">
-                <div class="lg:mx-20 flex flex-col my-10 sm:my-0 gap-x-4 lg:gap-y-10 gap-y-8">
-                    <div class="lg:leading-normal text-3xl lg:text-5xl font-black">
+            <div className="px-24 py-8 flex flex-col md:flex-row justify-between h-screen">
+                <div className="lg:mx-20 flex flex-col my-10 sm:my-0 gap-x-4 lg:gap-y-10 gap-y-8">
+                    <div className="lg:leading-normal text-3xl lg:text-5xl font-black">
                         Eat
                         What You Truly Desire :)</div>
-                    <div class="text-l lg:text-xl font-normal lg:leading-normal">
+                    <div className="text-l lg:text-xl font-normal lg:leading-normal">
                         We provide you the food you want at the right price and time
                     </div>
-                    <div class="flex flex-row gap-x-4 font-semibold">
+                    <div className="flex flex-row gap-x-4 font-semibold">
 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#64e7a6" viewBox="0 0 24 24" stroke="white"
-                            class="h-6 w-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            className="h-6 w-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         Fast Check-in Checkout
@@ -81,11 +81,11 @@ function Yellow() {
 
                     </div>
 
-                    <div class="flex flex-row gap-x-4 font-semibold">
+                    <div className="flex flex-row gap-x-4 font-semibold">
 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#64e7a6" viewBox="0 0 24 24" stroke="white"
-                            class="h-6 w-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            className="h-6 w-6">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         Bill On the Go
@@ -96,15 +96,15 @@ function Yellow() {
 
                 </div>
 
-                <div class="flex-shrink-0 flex-grow-0 sm:m-10 sm:w-1/2"><img src="img.png" alt=''></img></div>
+                <div className="flex-shrink-0 flex-grow-0 sm:m-10 sm:w-1/2"><img src="img.png" alt=''></img></div>
             </div>
 
         </section>
         <div className='menu-category-container'>
-        <MenuCategory categories={Object.keys(cachedMenu)} />
+        <MenuCategory categories={Object.keys(menuObj)} />
         </div>
         <div className='menu-container'>
-          <Menu items={cachedMenu} />
+          <Menu items={menuObj} />
         </div>
     </motion.div>
   )
