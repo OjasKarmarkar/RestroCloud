@@ -41,12 +41,12 @@ function OrderButton() {
     <div className='fixed bottom-10 left-0 h-12 w-full flex justify-center items-center'>
       <button
         onClick={() => pushBill()}
-        className='w-1/4 mx-12 bg-black h-[3.25rem] m-10 rounded-lg bottom-1 text-white text-xl'>
+        className='w-1/4 mx-12 bg-black h-[3.25rem] m-10 rounded-lg bottom-1 text-white text-xl border-2'>
         <p className='text-2xl'>Order - ₹{orderAmount}</p>
       </button>
       <button 
         onClick={() => history("/billing")}
-        className='w-1/4  bg-black h-[3.25rem] m-10 rounded-lg bottom-1 text-white text-xl'>
+        className='w-1/4  bg-black h-[3.25rem] m-10 rounded-lg bottom-1 text-white text-xl border-2'>
         <p className='text-2xl'>Proceed - ₹{billAmount}</p>
       </button>
     </div>
