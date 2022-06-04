@@ -66,8 +66,8 @@ function Yellow() {
                     <div className="lg:leading-normal text-3xl lg:text-5xl font-black">
                         Eat.
                         Treat. Repeat.</div>
-                    <div className="text-l lg:text-xl font-normal lg:leading-normal">
-                        We provide you the food you want at the right price and time
+                    <div className="text-l font-normal lg:leading-normal">
+                    RestroCloud makes ordering food at your favorite restaurant simple. Say 'NO!' to remembering your desired order; and also to a goof-up spoiling your time! 
                     </div>
                     <div className="flex flex-row gap-x-4 font-semibold">
 
@@ -76,7 +76,7 @@ function Yellow() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        Fast Check-in Checkout
+                        Fluid and easy-to-use interface
 
 
 
@@ -89,7 +89,7 @@ function Yellow() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
-                        Bill On the Go
+                        Electronic Bill Generation on-the-go
 
 
 
