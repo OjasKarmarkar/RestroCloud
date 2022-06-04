@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { MdFastfood } from 'react-icons/md'
-import { AiFillGithub } from "react-icons/ai";
+import { AiFillGithub , AiOutlineShoppingCart } from "react-icons/ai";
 import { useState , useEffect } from 'react'
 
 function Header() {
@@ -27,9 +27,9 @@ function Header() {
       <div className='flex'>
         <MdFastfood size={30} /> <div className='px-2 py-2'> <p>RestroCloud</p></div>
       </div>
-      <div className='flexz space-x-5'>
+      <div className='flexz space-x-10'>
         <Link to="/home" style={{textDecoration: "none", fontSize:"1.25em"}}>Home</Link>
-        <Link to="/orders" style={{textDecoration: "none", fontSize:"1.25em"}}>Orders</Link>
+        <Link to="/orders" style={{textDecoration: "none", fontSize:"1.25em"}}>My Orders</Link>
         <Link to="/billing" style={{textDecoration: "none", fontSize:"1.25em"}}>Billing</Link>
       </div>
       <div className='flex justify-center'>
@@ -37,6 +37,13 @@ function Header() {
           <a href="https://github.com/OjasKarmarkar/RestroCloud" target="_blank" rel="noreferrer noopener">
             <AiFillGithub size={30}/>
           </a>
+        </button>
+        <button className='px-4'>
+        <Link to="/orders" style={{textDecoration: "none", fontSize:"1.25em"}}>
+        
+            <AiOutlineShoppingCart size={30}/>
+        </Link>
+          
         </button>
       {/* <BsPerson size={25}/> */}
       </div>

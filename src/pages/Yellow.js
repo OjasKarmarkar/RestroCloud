@@ -62,9 +62,10 @@ function Yellow() {
                 <section id="home">
             <div className="px-24 py-8 flex flex-col md:flex-row justify-between h-screen">
                 <div className="lg:mx-20 flex flex-col my-10 sm:my-0 gap-x-4 lg:gap-y-10 gap-y-8">
+                  <p className='text-neutral-500'>(#Table ID : 628210ec1035265f44981a60)</p>
                     <div className="lg:leading-normal text-3xl lg:text-5xl font-black">
-                        Eat
-                        What You Truly Desire :)</div>
+                        Eat.
+                        Treat. Repeat.</div>
                     <div className="text-l lg:text-xl font-normal lg:leading-normal">
                         We provide you the food you want at the right price and time
                     </div>
