@@ -18,7 +18,7 @@ function Order({ info}) {
 
       <div className='w-full px-6 flex justify-between text-3xl'>
         <p>{info.name}</p>
-        <p>₹69</p>
+        <p>₹100</p>
       </div>
 
       <div className='w-full h-1/6 px-6 flex justify-start text-sm overflow-y-auto'>

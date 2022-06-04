@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { MdFastfood } from 'react-icons/md'
-import { AiFillGithub , AiOutlineShoppingCart } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 import { useState , useEffect } from 'react'
 
 function Header() {
@@ -38,12 +38,7 @@ function Header() {
             <AiFillGithub size={30}/>
           </a>
         </button>
-        <button className='px-4'>
-        <Link to="/orders" style={{textDecoration: "none", fontSize:"1.25em"}}>
-        
-            <AiOutlineShoppingCart size={30}/>
-        </Link>
-          
+        <button className='px-4'>          
         </button>
       {/* <BsPerson size={25}/> */}
       </div>

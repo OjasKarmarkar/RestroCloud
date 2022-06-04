@@ -9,7 +9,7 @@ const orderSlice = createSlice({
     addOrder: (state, action) => {
         if (!(action.payload in state))
         {
-            state.value[action.payload[0]] = {info: action.payload[1], count: 1, cost: 69}
+            state.value[action.payload[0]] = {info: action.payload[1], count: 1, cost: 100}
         }
     },
     removeOrder: (state) => {

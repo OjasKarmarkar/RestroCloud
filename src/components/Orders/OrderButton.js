@@ -38,7 +38,7 @@ function OrderButton() {
   }
 
   return (
-    <div className='fixed bottom-10 left-0 h-12 w-full flex justify-center items-center'>
+    <div className='fixed bottom-0 left-0 h-12 w-full flex justify-center items-center'>
       <button
         onClick={() => pushBill()}
         className='w-1/4 mx-12 bg-black h-[3.25rem] m-10 rounded-lg bottom-1 text-white text-xl border-2'>

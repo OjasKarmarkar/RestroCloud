@@ -20,7 +20,7 @@ function MenuItem({itemInfo}) {
 
       <div className='w-full max-h-8 text-clip px-6 flex justify-between text-2xl overflow-hidden'>
         <p>{itemInfo.name}</p>
-        <p>₹69</p>
+        <p>₹100</p>
       </div>
 
       <div className='w-full max-h-4 px-6 flex justify-start text-xs text-gray-400 overflow-hidden' >
@@ -52,7 +52,7 @@ function MenuItem({itemInfo}) {
             return item
           })}
         </div>
-        <p className='text-2xl font-semibold'>₹69</p>
+        <p className='text-2xl font-semibold'>₹100</p>
       </div> */}
     </div>
   )
