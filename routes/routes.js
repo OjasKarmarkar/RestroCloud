@@ -6,7 +6,8 @@ import {
   tableInfo,
   updateOrder,
   resetTable,
-  getBill
+  getBill,
+  createOrder
 } from '../controller/restro.js'
 
 const router = new express.Router()
@@ -22,6 +23,9 @@ router.get('/table/:id', tableInfo)
 
 //Update order/table
 router.put('/update-order/:id/:ord', updateOrder)
+
+//Create Order
+router.post('/create-order/:id', createOrder)
 
 //Reset Table
 router.put('/reset/:id' , resetTable)

@@ -37,12 +37,36 @@ const tableInfo = async (req, res) => {
 
 const updateOrder = async (req, res) => {
     if(req.body.items){
+        
         try {
             Tables.findOneAndUpdate({"_id": mongoose.Types.ObjectId(req.params.id)} , {$set: {"orders.$[el].items": req.body.items} },
             {
               arrayFilters: [{ "el.id": parseInt(req.params.ord) }],
               new: true
             }, function (err, table) {
+                console.log(table)
+                if (table) {
+                    res.status(201).json({ "success": true, "data": table })
+                } else {
+                    res.status(400).json({ "success": false, "data": [], "message": err })
+                }
+
+            });
+        } catch (error) {
+            res.status(500).json({ "success": false, "data": [], "message": error.toString() })
+        }
+    }else{
+        res.status(500).json({ "success": false, "data": [], "message": "Send Items to update !!" })
+    }
+
+}
+
+const createOrder = async (req, res) => {
+    if(req.body.items){
+        
+        try {
+            Tables.findOneAndUpdate({"_id": mongoose.Types.ObjectId(req.params.id)} , {$push: {orders: req.body.items} },
+           function (err, table) {
                 console.log(table)
                 if (table) {
                     res.status(201).json({ "success": true, "data": table })
@@ -82,10 +106,27 @@ const resetTable = async (req, res) => {
 
 const getBill = async (req, res) => {
     try {
-        Tables.find({"_id": mongoose.Types.ObjectId(req.params.id)}, function (err, table) {
-            console.log(table)
+        Tables.findOne({"_id": mongoose.Types.ObjectId(req.params.id)}, function (err, table) {
+            let bills = []
+            let total = 0;
+           
+            for(let i=0; i< table.orders.length; i++){
+                for(let j = 0; j<table.orders.length;j++){
+                  try {
+                    bills.push(table.orders[i][j].cost)
+                    total+=table.orders[i][j].cost
+                  } catch (error) {
+                      
+                  }
+                    
+                }
+           
+            }
             if (table) {
-                res.status(201).json({ "success": true, "data": table })
+                res.status(201).json({ "success": true, "data": {
+                    "bills" : bills,
+                    "sum": total
+                } })
             } else {
                 res.status(400).json({ "success": false, "data": [], "message": err })
             }
@@ -101,5 +142,6 @@ export {
     tableInfo,
     updateOrder,
     resetTable,
-    getBill
+    getBill,
+    createOrder
 }
