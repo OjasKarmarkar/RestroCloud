@@ -23,7 +23,7 @@ function Header() {
   })
 
   return (
-    <div className={'fixed top-0  text-black dark:bg-slate-900 font-semibold flex w-screen justify-around items-center py-4 h-20 z-50 ' + (navbar ? "bg-white" : null)}>
+    <div className={'fixed top-0  text-black dark:bg-slate-900 dark:text-white font-semibold flex w-screen justify-around items-center py-4 h-20 z-50 ' + (navbar ? "bg-white" : null)}>
       <div className='flex'>
         <MdFastfood size={30} /> <div className='px-2 py-2'> <p>RestroCloud</p></div>
       </div>

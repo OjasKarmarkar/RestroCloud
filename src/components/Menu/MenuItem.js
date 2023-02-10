@@ -11,7 +11,7 @@ function MenuItem({itemInfo}) {
   return (
     <div className='h-[30rem] w-[95%] bg-white dark:bg-slate-800 dark:text-white mt-4 rounded-md flex flex-col space-y-5'>
     
-      <div className='w-full h-1/2 bg-white dark:bg-slate-900 rounded-lg flex items-center justify-center'>
+      <div className='w-full h-1/2 bg-white dark:bg-slate-900 dark:text-white rounded-lg flex items-center justify-center'>
         <img src=	{itemInfo.img} 
              alt="dish"
              className='w-full h-full object-cover rounded-t-md'

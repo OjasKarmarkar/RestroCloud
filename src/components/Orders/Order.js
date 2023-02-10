@@ -7,7 +7,7 @@ function Order({ info}) {
   const orders = useSelector( state => state.order.value )
 
   return(
-    <div className='h-[30rem] w-[95%] bg-white dark:bg-slate-800 dark:text-white mt-4 rounded-md flex flex-col space-y-5'>
+    <div className='h-[30rem] w-[95%] bg-white dark:bg-slate-800 dark:text-white rounded-md flex flex-col space-y-5'>
     
       <div className='w-full h-1/2 bg-white dark:bg-slate-900 rounded-lg flex items-center justify-center'>
         <img src=	{info.img} 

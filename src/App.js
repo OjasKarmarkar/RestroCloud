@@ -8,7 +8,7 @@ import './pages/Page.css'
 function App() {
   return (
     <Router>
-      <div className='bg-white dark:bg-black'>
+      <div className='bg-white dark:bg-black dark:text-white'>
       <Header />
       <AnimatedRoutes />
       <ScrollTop />

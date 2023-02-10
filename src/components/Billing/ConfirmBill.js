@@ -17,6 +17,8 @@ function ConfirmBill() {
                 history("/home")
                 console.log(res)
             }
+        ).catch(()=>
+            console.log("backend might be down")
         )
     }
 
